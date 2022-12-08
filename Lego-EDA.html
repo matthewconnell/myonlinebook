@@ -1,0 +1,1097 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Evolution of LEGO &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Discussion" href="discussion.html" />
+    <link rel="prev" title="Conclusion" href="EDA_conclusions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Vancouver tree dataset
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Trees
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="EDA_conclusions.html">
+   Conclusion
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  LEGO
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Evolution of LEGO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="discussion.html">
+   Discussion
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Lego-EDA.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLego-EDA.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Lego-EDA.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motivation">
+     Motivation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questions-of-interest">
+     Questions of interest
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis">
+   Analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-imports">
+     Data imports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataset-description">
+     Dataset description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-summary-table">
+     Data summary table
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-has-the-number-of-released-sets-changed-over-the-years">
+     How has the number of released sets changed over the years?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#which-colors-were-used-most-often-over-the-years">
+     Which colors were used most often over the years?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Evolution of LEGO</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motivation">
+     Motivation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questions-of-interest">
+     Questions of interest
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis">
+   Analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-imports">
+     Data imports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataset-description">
+     Dataset description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-summary-table">
+     Data summary table
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-has-the-number-of-released-sets-changed-over-the-years">
+     How has the number of released sets changed over the years?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#which-colors-were-used-most-often-over-the-years">
+     Which colors were used most often over the years?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="evolution-of-lego">
+<h1>Evolution of LEGO<a class="headerlink" href="#evolution-of-lego" title="Permalink to this headline">#</a></h1>
+<p>Sample Notebook by Junghoo Kim</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<section id="motivation">
+<h3>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">#</a></h3>
+<p>Ever since I played with my first LEGO set, I’ve noticed there have been huge increases in both the variety of colors and themes in available LEGO sets. The LEGO blocks that I remember playing with were generic square blocks with the iconic red, white, yellow, and green colors. I remember growing up and thinking Star Wars-themed sets were so cool, but now I see even more amazing sets available like Frozen-themed sets, Super Mario themed sets and Venom set!</p>
+<p><img alt="" src="https://i5.walmartimages.ca/images/Large/319/657/6000203319657.jpg" /></p>
+<p>I feel as if there has been a big increase in the total number of LEGO sets produced over the years. The variety of themes have increased for sure, but are there fan-favourite themes that are still being produced most often? Has the distribution of colors used for the Lego parts changed as the more popular themes have shifted away from the colors like red and yellow used in the classic LEGO sets? Last but not least, how has the number of parts in each set changed over the years? Does each set still contain just as many pieces as they did 20 years ago, or are there more/fewer pieces now? We will be able to address these questions using an interactive dashboard.</p>
+</section>
+<section id="questions-of-interest">
+<h3>Questions of interest<a class="headerlink" href="#questions-of-interest" title="Permalink to this headline">#</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. How has the total number of LEGO sets produced changed over the years?
+2. How has the distribution of the number of LEGO sets with different themes changed over the years?
+3. Which colors were used most often for LEGO parts over the years?
+4. How has the number of parts in each set changed over the years?
+</pre></div>
+</div>
+</section>
+</section>
+<section id="analysis">
+<h2>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">#</a></h2>
+<section id="data-imports">
+<h3>Data imports<a class="headerlink" href="#data-imports" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import libraries needed for this assignment</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="s2">&quot;data_server&quot;</span><span class="p">)</span>
+
+<span class="c1"># Data URLs </span>
+<span class="n">themes_url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego-themes.csv&quot;</span>
+<span class="n">sets_url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego-sets.csv&quot;</span>
+<span class="n">inventories_url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego_inventories.csv&quot;</span>
+<span class="n">inventory_parts_url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego_inventory_parts.csv&quot;</span>
+<span class="n">colors_url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego-colors.csv&quot;</span>
+<span class="n">combined_url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego-combined.csv&quot;</span>
+
+<span class="c1"># DataFrames from local csv files</span>
+<span class="n">themes_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">themes_url</span><span class="p">)</span>
+<span class="n">sets_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">sets_url</span><span class="p">)</span>
+<span class="n">inventories_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">inventories_url</span><span class="p">)</span>
+<span class="n">inventory_parts_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">inventory_parts_url</span><span class="p">)</span>
+<span class="n">colors_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">colors_url</span><span class="p">)</span>
+<span class="n">combined_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">combined_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dataset-description">
+<h3>Dataset description<a class="headerlink" href="#dataset-description" title="Permalink to this headline">#</a></h3>
+<p>The below descriptions were taken directly from the website where the datasets were obtained.</p>
+<p>“LEGO is a popular brand of toy building bricks. They are often sold in sets with in order to build a specific object. Each set contains a number of parts in different shapes, sizes and colors. This database contains information on which parts are included in different LEGO sets. It was originally compiled to help people who owned some LEGO sets already figure out what other sets they could build with the pieces they had.”</p>
+<p>The LEGO dataset is composed of 8
+tables, colors.csv, inventories.csv, inventory_parts.csv, inventory_sets.csv, part_categories.csv, parts.csv,sets.csv, and themes.csv . Each table is stored in a .csv file and contains different information about lego pieces including shapes, sizes, sets, colors, and themes. Tables below summarize the themes, sets, inventories, inventory_parts, and colors data, as well as which columns will be used to answer which questions. Same colors are used to indicate the columns that are shared between different .csv files.</p>
+</section>
+<section id="data-summary-table">
+<h3>Data summary table<a class="headerlink" href="#data-summary-table" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">themes_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">themes_df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 614 entries, 0 to 613
+Data columns (total 3 columns):
+ #   Column     Non-Null Count  Dtype  
+---  ------     --------------  -----  
+ 0   id         614 non-null    int64  
+ 1   name       614 non-null    object 
+ 2   parent_id  503 non-null    float64
+dtypes: float64(1), int64(1), object(1)
+memory usage: 14.5+ KB
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>parent_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>614.000000</td>
+      <td>503.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>307.500000</td>
+      <td>274.294235</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>177.390811</td>
+      <td>176.070151</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>154.250000</td>
+      <td>126.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>307.500000</td>
+      <td>264.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>460.750000</td>
+      <td>430.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>614.000000</td>
+      <td>591.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="how-has-the-number-of-released-sets-changed-over-the-years">
+<h3>How has the number of released sets changed over the years?<a class="headerlink" href="#how-has-the-number-of-released-sets-changed-over-the-years" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sets_per_year</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">sets_url</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">mark_bar</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;navy&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;year:O&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">),</span>
+        <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;count()&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Number of Sets&quot;</span><span class="p">),</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">&quot;count()&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Number of Sets&quot;</span><span class="p">)])</span>
+    <span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">350</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">sets_per_year</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Fig 1. Number of sets produced each year from 1950-2017&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-2d88501869174ea7a165af0464ccdf10"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-2d88501869174ea7a165af0464ccdf10") {
+      outputDiv = document.getElementById("altair-viz-2d88501869174ea7a165af0464ccdf10");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego-sets.csv"}, "mark": {"type": "bar", "color": "navy"}, "encoding": {"tooltip": [{"aggregate": "count", "title": "Number of Sets", "type": "quantitative"}], "x": {"field": "year", "title": "Year", "type": "ordinal"}, "y": {"aggregate": "count", "title": "Number of Sets", "type": "quantitative"}}, "title": "Fig 1. Number of sets produced each year from 1950-2017", "width": 350, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>We can see from the above visualization that there is a fairly clear increasing trend in the number of sets produced each year from 1950 to 2017. But this makes me ask the following question: do the sets released in recent years have the same themes as the sets released in the earlier years? If the themes have changed over the years, what are some of the themes that have “defined” each era? Let’s find out!</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># On mouse click</span>
+<span class="n">select_year_click</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">encodings</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">],</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="n">nearest</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">sets_per_year_click</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">sets_per_year</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">select_year_click</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;navy&quot;</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;lightgray&quot;</span><span class="p">)))</span>
+    <span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">350</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">select_year_click</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;text&quot;</span> <span class="p">:</span> <span class="s2">&quot;Number of sets produced each year from 1950-2017.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subtitle&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Click on a bar to select the year. Hold shift to select multiple years.&quot;</span><span class="p">,</span> <span class="s2">&quot;Double-click to clear selection(s).&quot;</span><span class="p">]</span>
+    <span class="p">})</span>
+<span class="p">)</span>
+
+<span class="n">top_themes</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">sets_url</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">select_year_click</span><span class="p">)</span>     <span class="c1"># filter for selected year</span>
+    <span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;name:N&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Theme&quot;</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;-y&#39;</span><span class="p">),</span>
+        <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;sets_count:Q&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Number of Sets&quot;</span><span class="p">),</span>
+        <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;navy&quot;</span><span class="p">),</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">&quot;sets_count:Q&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Number of Sets with Theme&quot;</span><span class="p">)])</span>
+    <span class="o">.</span><span class="n">transform_lookup</span><span class="p">(</span>
+        <span class="n">lookup</span><span class="o">=</span><span class="s1">&#39;theme_id&#39;</span><span class="p">,</span>
+        <span class="n">from_</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">LookupData</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">themes_url</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span>
+                         <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]))</span>
+    <span class="o">.</span><span class="n">transform_aggregate</span><span class="p">(</span>
+        <span class="n">sets_count</span><span class="o">=</span><span class="s2">&quot;count()&quot;</span><span class="p">,</span>
+        <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">transform_window</span><span class="p">(</span>
+        <span class="n">rank</span><span class="o">=</span><span class="s1">&#39;rank(sets_count)&#39;</span><span class="p">,</span>
+        <span class="n">sort</span><span class="o">=</span><span class="p">[</span><span class="n">alt</span><span class="o">.</span><span class="n">SortField</span><span class="p">(</span><span class="s2">&quot;sets_count&quot;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s2">&quot;descending&quot;</span><span class="p">)])</span>
+    <span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">datum</span><span class="o">.</span><span class="n">rank</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Most used themes in selected year(s)&quot;</span><span class="p">,</span>
+                <span class="n">height</span><span class="o">=</span><span class="mi">350</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">350</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">select_year_click</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">sets_per_year_click</span> <span class="o">&amp;</span> <span class="n">top_themes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-9b25b2169edf4242a6defcd59526ad68"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-9b25b2169edf4242a6defcd59526ad68") {
+      outputDiv = document.getElementById("altair-viz-9b25b2169edf4242a6defcd59526ad68");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "vconcat": [{"mark": {"type": "bar", "color": "navy"}, "encoding": {"color": {"condition": {"value": "navy", "selection": "selector001"}, "value": "lightgray"}, "tooltip": [{"aggregate": "count", "title": "Number of Sets", "type": "quantitative"}], "x": {"field": "year", "title": "Year", "type": "ordinal"}, "y": {"aggregate": "count", "title": "Number of Sets", "type": "quantitative"}}, "height": 100, "selection": {"selector001": {"type": "multi", "encodings": ["x"], "on": "click", "nearest": true}}, "title": {"text": "Number of sets produced each year from 1950-2017.", "subtitle": ["Click on a bar to select the year. Hold shift to select multiple years.", "Double-click to clear selection(s)."]}, "width": 350}, {"mark": "bar", "encoding": {"color": {"value": "navy"}, "tooltip": [{"field": "sets_count", "title": "Number of Sets with Theme", "type": "quantitative"}], "x": {"field": "name", "sort": "-y", "title": "Theme", "type": "nominal"}, "y": {"field": "sets_count", "title": "Number of Sets", "type": "quantitative"}}, "height": 350, "selection": {"selector001": {"type": "multi", "encodings": ["x"], "on": "click", "nearest": true}}, "title": "Most used themes in selected year(s)", "transform": [{"filter": {"selection": "selector001"}}, {"lookup": "theme_id", "from": {"data": {"url": "https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego-themes.csv"}, "key": "id", "fields": ["name"]}}, {"aggregate": [{"op": "count", "as": "sets_count"}], "groupby": ["name"]}, {"window": [{"op": "rank", "field": "sets_count", "as": "rank"}], "sort": [{"field": "sets_count", "order": "descending"}]}, {"filter": "(datum.rank <= 10)"}], "width": 350}], "data": {"url": "https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego-sets.csv"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>That’s interesting! Sets produced in 1950s mostly had “Basic Set”, “Town Plan”, “Traffic”, and “Supplemental” themes. These are the generic yet iconic LEGO themes that I remember.</p>
+<p>In contrast, you can start seeing some trendy themes in 2000s and 2010s. For example, in 2004, when the “Harry Potter and the Prisoner of Azkaban” film was released, there were 11 sets produced with the “Prisoner of Azkaban” theme! Similarly, in 2011 when “Pirates of the Caribbean: On Stranger Tides” movie was released, there were 16 LEGO sets released with “Pirates of the Caribbean” theme.</p>
+<p>It’s also interesting to see themes related to other major events such as 33 LEGO sets with “Soccer” theme in 2002, when the 17th FIFA World Cup took place.</p>
+<p>Despite these variations in the trendy themes across years, we see that Star Wars themes such as “Star Wars Clone Wars”, “Star Wars Episode 4/5/6”, and “Star Wars Episode 7” appear consistently among the most used themes between 2008-2017.</p>
+<p>It appears that there have been some major changes in the themes used for LEGO sets. Have the colors used for the LEGO blocks also changed over the years? We can answer that, too!</p>
+</section>
+<section id="which-colors-were-used-most-often-over-the-years">
+<h3>Which colors were used most often over the years?<a class="headerlink" href="#which-colors-were-used-most-often-over-the-years" title="Permalink to this headline">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">color_slider</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">binding_range</span><span class="p">(</span>
+    <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="nb">min</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="nb">max</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+
+<span class="n">select_colors</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">(</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;num_colors&#39;</span><span class="p">],</span>
+    <span class="n">bind</span><span class="o">=</span><span class="n">color_slider</span><span class="p">,</span>
+    <span class="n">init</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;num_colors&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">},</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Select&#39;</span><span class="p">)</span>
+
+<span class="n">colors_filtered</span> <span class="o">=</span> <span class="n">colors_df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;id &gt;= 0 &amp; id &lt; 9999&quot;</span><span class="p">)</span>
+
+<span class="n">colors</span> <span class="o">=</span> <span class="n">colors_filtered</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="c1"># I&#39;m adding &quot;#&quot; prefix to the rgb values (e.g. &quot;0033B2&quot;) so that Altair knows these are RGB values</span>
+<span class="n">rgbs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;#</span><span class="si">{</span><span class="n">rgb</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">rgb</span> <span class="ow">in</span> <span class="n">colors_filtered</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">colors_filtered</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">colors</span><span class="p">,</span> <span class="s1">&#39;rgb&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+
+<span class="n">colors_parts</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">combined_url</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">select_year_click</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">datum</span><span class="o">.</span><span class="n">id_color</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;</span> <span class="n">alt</span><span class="o">.</span><span class="n">datum</span><span class="o">.</span><span class="n">id_color</span> <span class="o">&lt;</span> <span class="mi">9999</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">mark_bar</span><span class="p">(</span><span class="n">stroke</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;total_parts:Q&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Number of Parts&quot;</span><span class="p">),</span>
+        <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;name_color:N&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Color&quot;</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;-x&#39;</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;name_color:N&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">rgbs</span><span class="p">),</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">&quot;total_parts:Q&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Number of Parts with Color&quot;</span><span class="p">)])</span>
+    <span class="o">.</span><span class="n">transform_aggregate</span><span class="p">(</span>
+        <span class="n">total_parts</span><span class="o">=</span><span class="s2">&quot;sum(quantity)&quot;</span><span class="p">,</span>
+        <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;name_color&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">transform_window</span><span class="p">(</span>
+        <span class="n">rank</span><span class="o">=</span><span class="s1">&#39;rank(total_parts)&#39;</span><span class="p">,</span>
+        <span class="n">sort</span><span class="o">=</span><span class="p">[</span><span class="n">alt</span><span class="o">.</span><span class="n">SortField</span><span class="p">(</span><span class="s2">&quot;total_parts&quot;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s2">&quot;descending&quot;</span><span class="p">)])</span>
+    <span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">select_colors</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">datum</span><span class="o">.</span><span class="n">rank</span> <span class="o">&lt;=</span> <span class="n">select_colors</span><span class="o">.</span><span class="n">num_colors</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;text&quot;</span> <span class="p">:</span> <span class="s2">&quot;Top colors with most number of parts in selected year(s)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subtitle&quot;</span> <span class="p">:</span> <span class="s2">&quot;Use slider below to select number of colors to show.&quot;</span><span class="p">},</span>
+                <span class="n">height</span><span class="o">=</span><span class="mi">550</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="p">((</span><span class="n">sets_per_year_click</span> <span class="o">&amp;</span> <span class="n">top_themes</span><span class="p">)</span> <span class="o">|</span> <span class="n">colors_parts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-cdfd8d12b7dd4520b2e305c29217c459"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-cdfd8d12b7dd4520b2e305c29217c459") {
+      outputDiv = document.getElementById("altair-viz-cdfd8d12b7dd4520b2e305c29217c459");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "hconcat": [{"vconcat": [{"mark": {"type": "bar", "color": "navy"}, "encoding": {"color": {"condition": {"value": "navy", "selection": "selector001"}, "value": "lightgray"}, "tooltip": [{"aggregate": "count", "title": "Number of Sets", "type": "quantitative"}], "x": {"field": "year", "title": "Year", "type": "ordinal"}, "y": {"aggregate": "count", "title": "Number of Sets", "type": "quantitative"}}, "height": 100, "selection": {"selector001": {"type": "multi", "encodings": ["x"], "on": "click", "nearest": true}}, "title": {"text": "Number of sets produced each year from 1950-2017.", "subtitle": ["Click on a bar to select the year. Hold shift to select multiple years.", "Double-click to clear selection(s)."]}, "width": 350}, {"mark": "bar", "encoding": {"color": {"value": "navy"}, "tooltip": [{"field": "sets_count", "title": "Number of Sets with Theme", "type": "quantitative"}], "x": {"field": "name", "sort": "-y", "title": "Theme", "type": "nominal"}, "y": {"field": "sets_count", "title": "Number of Sets", "type": "quantitative"}}, "height": 350, "selection": {"selector001": {"type": "multi", "encodings": ["x"], "on": "click", "nearest": true}}, "title": "Most used themes in selected year(s)", "transform": [{"filter": {"selection": "selector001"}}, {"lookup": "theme_id", "from": {"data": {"url": "https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego-themes.csv"}, "key": "id", "fields": ["name"]}}, {"aggregate": [{"op": "count", "as": "sets_count"}], "groupby": ["name"]}, {"window": [{"op": "rank", "field": "sets_count", "as": "rank"}], "sort": [{"field": "sets_count", "order": "descending"}]}, {"filter": "(datum.rank <= 10)"}], "width": 350}], "data": {"url": "https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego-sets.csv"}}, {"data": {"url": "https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego-combined.csv"}, "mark": {"type": "bar", "stroke": "black"}, "encoding": {"color": {"field": "name_color", "legend": null, "scale": {"domain": ["Black", "Blue", "Green", "Dark Turquoise", "Red", "Dark Pink", "Brown", "Light Gray", "Dark Gray", "Light Blue", "Bright Green", "Light Turquoise", "Salmon", "Pink", "Yellow", "White", "Light Green", "Light Yellow", "Tan", "Light Violet", "Glow In Dark Opaque", "Purple", "Dark Blue-Violet", "Orange", "Magenta", "Lime", "Dark Tan", "Bright Pink", "Medium Lavender", "Lavender", "Trans-Black IR Lens", "Trans-Dark Blue", "Trans-Green", "Trans-Bright Green", "Trans-Red", "Trans-Black", "Trans-Light Blue", "Trans-Neon Green", "Trans-Very Lt Blue", "Trans-Dark Pink", "Trans-Yellow", "Trans-Clear", "Trans-Purple", "Trans-Neon Yellow", "Trans-Neon Orange", "Chrome Antique Brass", "Chrome Blue", "Chrome Green", "Chrome Pink", "Chrome Black", "Very Light Orange", "Light Purple", "Reddish Brown", "Light Bluish Gray", "Dark Bluish Gray", "Medium Blue", "Medium Green", "Speckle Black-Copper", "Speckle DBGray-Silver", "Light Pink", "Light Flesh", "Milky White", "Metallic Silver", "Metallic Green", "Metallic Gold", "Medium Dark Flesh", "Dark Purple", "Dark Flesh", "Royal Blue", "Flesh", "Light Salmon", "Violet", "Blue-Violet", "Glitter Trans-Dark Pink", "Medium Lime", "Glitter Trans-Clear", "Aqua", "Light Lime", "Light Orange", "Glitter Trans-Purple", "Speckle Black-Silver", "Speckle Black-Gold", "Copper", "Pearl Light Gray", "Metal Blue", "Pearl Light Gold", "Trans-Medium Blue", "Pearl Dark Gray", "Pearl Very Light Gray", "Very Light Bluish Gray", "Yellowish Green", "Flat Dark Gold", "Flat Silver", "Trans-Orange", "Pearl White", "Bright Light Orange", "Bright Light Blue", "Rust", "Bright Light Yellow", "Trans-Pink", "Sky Blue", "Trans-Light Purple", "Dark Blue", "Dark Green", "Glow In Dark Trans", "Pearl Gold", "Dark Brown", "Maersk Blue", "Dark Red", "Dark Azure", "Medium Azure", "Light Aqua", "Olive Green", "Chrome Gold", "Sand Red", "Medium Dark Pink", "Earth Orange", "Sand Purple", "Sand Green", "Sand Blue", "Chrome Silver", "Fabuland Brown", "Medium Orange", "Dark Orange", "Very Light Gray", "Glow in Dark White", "Medium Violet", "Glitter Trans-Neon Green", "Glitter Trans-Light Blue", "Trans Flame Yellowish Orange", "Trans Fire Yellow", "Trans Light Royal Blue", "Reddish Lilac"], "range": ["#05131D", "#0055BF", "#237841", "#008F9B", "#C91A09", "#C870A0", "#583927", "#9BA19D", "#6D6E5C", "#B4D2E3", "#4B9F4A", "#55A5AF", "#F2705E", "#FC97AC", "#F2CD37", "#FFFFFF", "#C2DAB8", "#FBE696", "#E4CD9E", "#C9CAE2", "#D4D5C9", "#81007B", "#2032B0", "#FE8A18", "#923978", "#BBE90B", "#958A73", "#E4ADC8", "#AC78BA", "#E1D5ED", "#635F52", "#0020A0", "#84B68D", "#D9E4A7", "#C91A09", "#635F52", "#AEEFEC", "#F8F184", "#C1DFF0", "#DF6695", "#F5CD2F", "#FCFCFC", "#A5A5CB", "#DAB000", "#FF800D", "#645A4C", "#6C96BF", "#3CB371", "#AA4D8E", "#1B2A34", "#F3CF9B", "#CD6298", "#582A12", "#A0A5A9", "#6C6E68", "#5A93DB", "#73DCA1", "#000000", "#635F61", "#FECCCF", "#F6D7B3", "#FFFFFF", "#A5A9B4", "#899B5F", "#DBAC34", "#CC702A", "#3F3691", "#7C503A", "#4C61DB", "#D09168", "#FEBABD", "#4354A3", "#6874CA", "#DF6695", "#C7D23C", "#FFFFFF", "#B3D7D1", "#D9E4A7", "#F9BA61", "#A5A5CB", "#000000", "#000000", "#AE7A59", "#9CA3A8", "#7988A1", "#DCBC81", "#CFE2F7", "#575857", "#ABADAC", "#E6E3E0", "#DFEEA5", "#B48455", "#898788", "#F08F1C", "#F2F3F2", "#F8BB3D", "#9FC3E9", "#B31004", "#FFF03A", "#E4ADC8", "#7DBFDD", "#96709F", "#0A3463", "#184632", "#BDC6AD", "#AA7F2E", "#352100", "#3592C3", "#720E0F", "#078BC9", "#36AEBF", "#ADC3C0", "#9B9A5A", "#BBA53D", "#D67572", "#F785B1", "#FA9C1C", "#845E84", "#A0BCAC", "#6074A1", "#E0E0E0", "#B67B50", "#FFA70B", "#A95500", "#E6E3DA", "#D9D9D9", "#9391E4", "#C0F500", "#68BCC5", "#FCB76D", "#FBE890", "#B4D4F7", "#8E5597"]}, "type": "nominal"}, "tooltip": [{"field": "total_parts", "title": "Number of Parts with Color", "type": "quantitative"}], "x": {"field": "total_parts", "title": "Number of Parts", "type": "quantitative"}, "y": {"field": "name_color", "sort": "-x", "title": "Color", "type": "nominal"}}, "height": 550, "selection": {"Select": {"type": "single", "fields": ["num_colors"], "bind": {"input": "range", "max": 25, "min": 5, "step": 1}, "init": {"num_colors": 10}}}, "title": {"text": "Top colors with most number of parts in selected year(s)", "subtitle": "Use slider below to select number of colors to show."}, "transform": [{"filter": {"selection": "selector001"}}, {"filter": "((0 && datum.id_color) < 9999)"}, {"aggregate": [{"op": "sum", "field": "quantity", "as": "total_parts"}], "groupby": ["name_color"]}, {"window": [{"op": "rank", "field": "total_parts", "as": "rank"}], "sort": [{"field": "total_parts", "order": "descending"}]}, {"filter": "(datum.rank <= Select.num_colors)"}]}], "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>We see in the above visualization that the colors used for the LEGO blocks have become more diverse in recent years. Now the color palette used includes colors such as “Lime”, “Trans-Light Blue”, and “Pearl Gold”.</p>
+<p>In addition, we can see that while grey colors were not used very much in the early years, light grey and dark grey colors are used much more in recent years. This change appears to have started around 1978 onwards.</p>
+<p>So far, we’ve seen that there have been some major changes in the themes used for the LEGO sets, as well as the color palette used for the LEGO blocks. I’m super interested in these newer LEGO sets with trendy themes and wide array of colors! But do these newer LEGO sets come with just as many pieces as they did in the earlier years?</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Boolean selection for point/line marks</span>
+<span class="n">scatter_check</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">binding_checkbox</span><span class="p">()</span>
+<span class="n">line_check</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">binding_checkbox</span><span class="p">()</span>
+
+<span class="n">scatter_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="n">scatter_check</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Hide Scatter&quot;</span><span class="p">)</span>
+<span class="n">line_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="n">line_check</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Hide Mean Trend Line&quot;</span><span class="p">)</span>
+
+<span class="n">max_parts</span> <span class="o">=</span> <span class="n">sets_df</span><span class="p">[</span><span class="s2">&quot;num_parts&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="n">parts_per_set_scatter</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">sets_url</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">mark_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s2">&quot;navy&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;year:O&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">),</span>
+        <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;num_parts:Q&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Number of Parts in a Set&quot;</span><span class="p">,</span>
+              <span class="n">scale</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;sqrt&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_parts</span><span class="p">])),</span>
+        <span class="n">opacity</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">scatter_selection</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)),</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">&quot;name:N&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Name of Set&quot;</span><span class="p">),</span>
+                 <span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">&quot;num_parts:Q&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Number of Parts&quot;</span><span class="p">)])</span>
+    <span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">scatter_selection</span><span class="p">)</span>
+<span class="p">)</span>
+    
+<span class="n">parts_per_set_line</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">sets_url</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">mark_line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;year:O&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">),</span>
+        <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;num_parts:Q&quot;</span><span class="p">,</span> <span class="n">aggregate</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Number of Parts in a Set&quot;</span><span class="p">,</span>
+              <span class="n">scale</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;sqrt&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_parts</span><span class="p">])),</span>
+        <span class="n">opacity</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">line_selection</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)),</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">&quot;year:O&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">),</span>
+                 <span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">&quot;num_parts:Q&quot;</span><span class="p">,</span> <span class="n">aggregate</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Mean Number of Parts&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;.2f&#39;</span><span class="p">)])</span>
+    <span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">line_selection</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">parts_per_set</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="n">parts_per_set_scatter</span> <span class="o">+</span> <span class="n">parts_per_set_line</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">350</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Number of parts in a set&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">sets_per_year_click</span> <span class="o">&amp;</span> <span class="n">parts_per_set</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-23913301536b4f4b8f1087d10a02a109"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-23913301536b4f4b8f1087d10a02a109") {
+      outputDiv = document.getElementById("altair-viz-23913301536b4f4b8f1087d10a02a109");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "vconcat": [{"mark": {"type": "bar", "color": "navy"}, "encoding": {"color": {"condition": {"value": "navy", "selection": "selector001"}, "value": "lightgray"}, "tooltip": [{"aggregate": "count", "title": "Number of Sets", "type": "quantitative"}], "x": {"field": "year", "title": "Year", "type": "ordinal"}, "y": {"aggregate": "count", "title": "Number of Sets", "type": "quantitative"}}, "height": 100, "selection": {"selector001": {"type": "multi", "encodings": ["x"], "on": "click", "nearest": true}}, "title": {"text": "Number of sets produced each year from 1950-2017.", "subtitle": ["Click on a bar to select the year. Hold shift to select multiple years.", "Double-click to clear selection(s)."]}, "width": 350}, {"layer": [{"mark": {"type": "point", "fill": "navy", "size": 5}, "encoding": {"opacity": {"condition": {"value": 0.5, "selection": "Hide Scatter"}, "value": 0.0}, "tooltip": [{"field": "name", "title": "Name of Set", "type": "nominal"}, {"field": "num_parts", "title": "Number of Parts", "type": "quantitative"}], "x": {"field": "year", "title": "Year", "type": "ordinal"}, "y": {"field": "num_parts", "scale": {"domain": [0, 5922], "type": "sqrt"}, "title": "Number of Parts in a Set", "type": "quantitative"}}, "selection": {"Hide Scatter": {"type": "single", "bind": {"input": "checkbox"}}}}, {"mark": {"type": "line", "color": "red", "strokeWidth": 5}, "encoding": {"opacity": {"condition": {"value": 1, "selection": "Hide Mean Trend Line"}, "value": 0.0}, "tooltip": [{"field": "year", "title": "Year", "type": "ordinal"}, {"aggregate": "mean", "field": "num_parts", "format": ".2f", "title": "Mean Number of Parts", "type": "quantitative"}], "x": {"field": "year", "title": "Year", "type": "ordinal"}, "y": {"aggregate": "mean", "field": "num_parts", "scale": {"domain": [0, 5922], "type": "sqrt"}, "title": "Number of Parts in a Set", "type": "quantitative"}}, "selection": {"Hide Mean Trend Line": {"type": "single", "bind": {"input": "checkbox"}}}}], "height": 100, "title": "Number of parts in a set", "width": 350}], "data": {"url": "https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/lego-sets.csv"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Side Note: Unforunately, the checkbox widgets do not work after the first click. This issue is documented in Altair repo as well as Vega-Lite repo, and will hopefully be fixed in future versions.</p>
+<p>As seen in the plot above, the number of parts in a set has had a generally increasing trend over the years. Using the tooltips, we can also see some sets with many parts above the mean, such as Taj Mahal set released in 2008 with 5922 parts, and Millennium Falcon - UCS set released in 2007 with 5195 parts.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="EDA_conclusions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Conclusion</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="discussion.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Discussion</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
