@@ -1,0 +1,14 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Trees
+  chapters:
+  - file: EDA.ipynb
+  - file: EDA_conclusions
+- caption: LEGO
+  chapters:
+  - file: Lego-EDA.ipynb
+  - file: discussion.md
